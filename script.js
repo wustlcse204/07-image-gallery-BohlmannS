@@ -5,6 +5,9 @@ var currentImg = 0;
 var container = document.getElementById("imageContainer");
 window.onload= function(){
 	giveOnClick();
+	document.getElementById("close").onclick = function() {
+		container.style.display = "none";
+	}
 }
 
 function giveOnClick(){
@@ -24,10 +27,6 @@ function makeBig(id){
 	var containerImg = document.getElementById("bigImage");
 	container.style.display = "block";
 	containerImg.src = img.src;
-}
-
-function close(){
-	container.style.display = "none";
 }
 
 function next(direction){
